@@ -422,7 +422,7 @@ angular.module(module.exports, []).
   service('globalConfig', ['$http', '$window', '$q', 'notifications', function($http, $window, $q, notifications) {
     var fail2webConfig = $q.defer();
 
-    $http({method: 'GET', url: $window.location.origin + '/config.json'}).
+    $http({method: 'GET', url: 'config.json'}).
       success(function(data) {
         fail2webConfig.resolve({'fail2rest': $window.location.origin + data.APIRoot});
       }).
